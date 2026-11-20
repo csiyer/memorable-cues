@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Choice Task</title>
+
+    <script src="https://unpkg.com/jspsych@8.2.3"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-slider-response@2.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-multi-choice@2.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@2.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-preload@2.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-fullscreen@2.0.0"></script>
+    <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe@0.5.0"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/jspsych@8.2.3/css/jspsych.css">
+
+
+    <style>
+        /* Trial screens follow Li et al.'s (2022) style.css on jsPsych's default stylesheet
+           (Open Sans 18px, default buttons), as in their original task. */
+        body {
+            background: #ffffff;
+        }
+
+        /* ── Li et al.'s style.css ── */
+        p.instruct { text-align: center; max-width: 800px; font-size: 24px; margin-left: auto; margin-right: auto; }
+        p.title    { text-align: center; font-size: 36px; padding: 0 0 0 0; font-weight: bold; }
+        p.subtitle2 { text-align: center; font-size: 28px; line-height: 42px; }
+        div.fix {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 72px;
+        }
+
+        /* Li et al.'s image styles: rating image, and choice images (grey border, green when picked) */
+        .food-img { width: 300px; padding: 10px; }
+        .choice-img { width: 300px; padding: 20px; margin: 5px; border: 5px solid #555; }
+        .choice-img.picked { border-color: #55CC33; }
+
+        .choice-message { font-size: 40px; font-weight: bold; color: red; }
+
+        /* Comprehension quiz questions, left-aligned as in Li et al.'s forms */
+        #jspsych-survey-multi-choice_form { max-width: 800px; margin: 0 auto; text-align: left; }
+
+        /* ── Screens not in Li et al.'s task (consent, attention checks, messages, survey) ── */
+        .instruction-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 36px 36px 28px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+            text-align: left;
+        }
+
+        .instruction-container h2 { margin: 0 0 16px; text-align: center; }
+
+        /* Turnstile verification styles */
+        .turnstile-page { text-align: center; }
+        .turnstile-widget { display: flex; justify-content: center; margin-bottom: 20px; }
+        .turnstile-status { font-size: 22px; margin-top: 20px; min-height: 30px; }
+        .turnstile-success { color: #4CAF50; }
+        .turnstile-fail { color: #f44336; }
+    </style>
+</head>
+
+<body>
+    <script src="memorability_choice_image.js"></script>
+</body>
+
+</html>
